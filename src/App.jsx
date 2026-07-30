@@ -1,3 +1,4 @@
+import "./App.css";
 import MainContent from "./components/mainContent";
 import PlayBar from "./components/playBar";
 import RightP from "./components/rightP";

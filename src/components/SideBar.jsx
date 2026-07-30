@@ -1,3 +1,4 @@
+import "./SideBar.css"
 function SideBar() {
     return (
         <aside className="sidebar">
@@ -7,7 +8,7 @@ function SideBar() {
             </div>
 
             <nav className="library-filters">
-                <button>Playlists</button>
+                <button>Playlissts</button>
 
                 <button>Podcasts</button>
 

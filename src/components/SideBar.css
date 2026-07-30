@@ -1,0 +1,88 @@
+.sidebar {
+    width: 280px;
+    background: #121212;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Header: title and create button sit side by side */
+.library-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.library-header h2 {
+    font-size: 18px;
+}
+
+.library-header button {
+    background: #242424;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+/* Filter buttons sit side by side and can wrap */
+.library-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.library-filters button {
+    background: #242424;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/* Search and Recents sit side by side */
+.library-search-sort {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.library-search-sort input {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.library-search-sort input::placeholder {
+    color: #b3b3b3;
+}
+
+.library-search-sort button {
+    background: transparent;
+    color: #b3b3b3;
+    border: none;
+    cursor: pointer;
+}
+
+/* Playlist items stay stacked */
+.playlist-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.playlist-list p {
+    cursor: pointer;
+}
+.cards {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+}
