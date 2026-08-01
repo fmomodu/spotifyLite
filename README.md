@@ -60,3 +60,9 @@ Searching is one of Spotify's core features and demonstrates how React state and
 - Responsive mobile layout
 - Dynamic playlist data
 - Music playback functionality
+
+- ## Live Site
+https://fmomodu.github.io/spotifyLite/
+
+## Repository
+https://github.com/fmomodu/spotifyLite
