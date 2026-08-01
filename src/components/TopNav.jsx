@@ -9,7 +9,7 @@ import {
     FaUserCircle
 } from "react-icons/fa";
 
-function TopNav() {
+function TopNav({ search, setSearch }) {
     return (
         <header className="top-nav">
 
@@ -21,9 +21,10 @@ function TopNav() {
 
                 <FaSearch className="search-icon" />
                 <input
-
-                    type="text"
-                    placeholder="What do you want to play?"
+                type="text"
+                placeholder="What do you want to play?"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
                 />
 
                 <button className="browse-button">

@@ -1,6 +1,42 @@
 import "./MainContent.css";
 
-function MainContent() {
+function MainContent({ search }) {
+
+  const recentlyPlayed = [
+    "daylist",
+    "Brick + Mortar",
+    "Liked Songs",
+    "Submarine",
+    "Powders",
+    "Trinity",
+  ];
+
+  const pickedForYou = [
+    "Tyla",
+    "The Marías",
+    "Beach House",
+    "Aziya",
+  ];
+
+  const madeForYou = [
+    "Daily Mix 1",
+    "Daily Mix 2",
+    "AI DJ",
+    "Release Radar",
+  ];
+
+  const recents = [
+    "Playlist 1",
+    "Playlist 2",
+    "Playlist 3",
+    "Playlist 4",
+  ];
+
+  const filterItems = (items) =>
+    items.filter((item) =>
+      item.toLowerCase().includes(search.toLowerCase())
+    );
+
   return (
     <main className="main-content">
 
@@ -15,12 +51,11 @@ function MainContent() {
         <h2>Recently Played</h2>
 
         <div className="card-row">
-          <div className="card">daylist</div>
-          <div className="card">Brick + Mortar</div>
-          <div className="card">Liked Songs</div>
-          <div className="card">Submarine</div>
-          <div className="card">Powders</div>
-          <div className="card">Trinity</div>
+          {filterItems(recentlyPlayed).map((item) => (
+            <div className="card" key={item}>
+              {item}
+            </div>
+          ))}
         </div>
       </section>
 
@@ -28,10 +63,11 @@ function MainContent() {
         <h2>Picked For You</h2>
 
         <div className="card-row">
-          <div className="card">Tyla</div>
-          <div className="card">The Marías</div>
-          <div className="card">Beach House</div>
-          <div className="card">Aziya</div>
+          {filterItems(pickedForYou).map((item) => (
+            <div className="card" key={item}>
+              {item}
+            </div>
+          ))}
         </div>
       </section>
 
@@ -39,10 +75,11 @@ function MainContent() {
         <h2>Made For You</h2>
 
         <div className="card-row">
-          <div className="card">Daily Mix 1</div>
-          <div className="card">Daily Mix 2</div>
-          <div className="card">AI DJ</div>
-          <div className="card">Release Radar</div>
+          {filterItems(madeForYou).map((item) => (
+            <div className="card" key={item}>
+              {item}
+            </div>
+          ))}
         </div>
       </section>
 
@@ -50,10 +87,11 @@ function MainContent() {
         <h2>Recents</h2>
 
         <div className="card-row">
-          <div className="card">Playlist 1</div>
-          <div className="card">Playlist 2</div>
-          <div className="card">Playlist 3</div>
-          <div className="card">Playlist 4</div>
+          {filterItems(recents).map((item) => (
+            <div className="card" key={item}>
+              {item}
+            </div>
+          ))}
         </div>
       </section>
 

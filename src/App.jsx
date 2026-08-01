@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import MainContent from "./components/mainContent";
 import PlayBar from "./components/playBar";
@@ -6,13 +7,15 @@ import SideBar from "./components/sidebar";
 import TopNav from "./components/topNav";
 
 function App() {
+  const [search, setSearch] = useState("");
+
   return (
     <div className="spotify-layout">
-      <TopNav />
+      <TopNav search={search} setSearch={setSearch} />
 
       <div className="main-layout">
         <SideBar />
-        <MainContent />
+        <MainContent search={search} />
         <RightP />
       </div>
 
@@ -21,4 +24,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
